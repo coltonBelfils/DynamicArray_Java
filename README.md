@@ -3,7 +3,7 @@
 ## Description
 
 ```java
-class dynamicArray.DynamicArray<E> implements iterable<E>
+class DynamicArray<E> implements iterable<E>
 ```
 
 dynamicArray.DynamicArray is a java datatype that acts like an array, but does't need to be initialized with a value when initialized.
