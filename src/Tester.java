@@ -5,8 +5,8 @@ import java.util.LinkedList;
 
 public class Tester {
     public static void main(String[] args) {
-        int index = 100000;
-        DataType dataType = DataType.LINKED_LIST;
+        int index = 10000000;
+        DataType dataType = DataType.DYNAMIC_ARRAY;
         Scenario scenario = Scenario.READ_ALL;
 
         switch (dataType) {//you have to test them one at a time otherwise the results for time and memory use don't appear to be right

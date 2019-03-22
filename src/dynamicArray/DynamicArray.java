@@ -3,43 +3,43 @@ package dynamicArray;
 import java.util.Iterator;
 
 public class DynamicArray<E> implements Iterable<E> {
-    private Node<E> head;
+    private Node head;
     private int maxValue;
 
-    private class Node<H> {
-        private H data;
-        private Node<H> zero;
-        private Node<H> one;
+    private class Node {
+        private E data;
+        private Node zero;
+        private Node one;
 
         Node() {
             data = null;
         }
 
-        private H getData() {
+        private E getData() {
             return data;
         }
 
-        private void setData(H data) {
+        private void setData(E data) {
             this.data = data;
         }
 
-        private Node<H> getZero() {
+        private Node getZero() {
             if(zero == null) {
-                zero = new Node<>();
+                zero = new Node();
             }
             return zero;
         }
 
-        private Node<H> getOne() {
+        private Node getOne() {
             if(one == null) {
-                one = new Node<>();
+                one = new Node();
             }
             return one;
         }
     }
 
     public DynamicArray() {
-        head = new Node<>();
+        head = new Node();
         maxValue = -1;
     }
 
@@ -92,9 +92,9 @@ public class DynamicArray<E> implements Iterable<E> {
         return bin;
     }
 
-    private Node<E> getNode(int index) {
+    private Node getNode(int index) {
         int[] binIndex = toBin(index);
-        Node<E> cur = head;
+        Node cur = head;
         for(int i : binIndex) {
             if(i == 0) {
                 cur = cur.getZero();
