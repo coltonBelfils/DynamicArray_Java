@@ -7,7 +7,7 @@ public class Tester {
     public static void main(String[] args) {
         int index = 10000000;
         DataType dataType = DataType.DYNAMIC_ARRAY;
-        Scenario scenario = Scenario.READ_ALL;
+        Scenario scenario = Scenario.READ_INDEX;
 
         switch (dataType) {//you have to test them one at a time otherwise the results for time and memory use don't appear to be right
             case DYNAMIC_ARRAY: {

@@ -115,7 +115,7 @@ public class DynamicArray<E> implements Iterable<E> {
 
     public void clear() {
         maxValue = -1;
-        head = null;
+        head = new Node();
     }
 
     @Override

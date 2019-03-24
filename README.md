@@ -1,4 +1,4 @@
-# dynamicArray.DynamicArray
+# DynamicArray
 
 ## Description
 
@@ -11,47 +11,39 @@ It essentially acts like an array that doesn't have a max index, while not havin
 Unlike Arraylist, any index can be set using .set(index, value) whereas calling that method using Arraylist would throw an array out of bounds exception.
 It is implemented in a tree like structure so, it initially has no elements allocated and only allocates elements in the array when either that element is being acceded or certain elements after it are being accessed.
 
-DynamicArray's string suit is in random access of indexes in the array. It matches arrays, ArrayLists, and LinkedList in speed and memory usage at small numbered indexes and beats all of them at large numbered indexes.
+DynamicArray's strong suit is in random access of indexes in the array. It matches arrays, ArrayLists, and LinkedLists in speed and memory usage at small numbered indexes and beats all of them at large numbered indexes.
 Its downside is in iterating over the whole array. Arrays, ArrayLists, and LinkedLists are all faster and use less memory when it comes to iteration.
 
 ## Methods
 
 ```java
-public DynamicArray()
+public DynamicArray()   O(1)
+``` 
+
+```java
+public int size()   O(1)
 ```
 
 ```java
-public int size()
+public E get(int index)   O(log(index))
 ```
 
 ```java
-public E get(int index)
+public void set(int index, E data)   O(log(index))
 ```
 
 ```java
-public void set(int index, E data)
+public boolean hasData(int index)   O(O(log(index)))
 ```
 
 ```java
-fun hasData(index: Long): Boolean
+public boolean isEmpty()   O(1)
 ```
 
 ```java
-public boolean isEmpty()
+public void clear()   O(1)
 ```
 
 ```java
-public boolean hasData(int index)
-```
-
-```java
-public boolean hasData(int index)
-```
-
-```java
-public void clear()
-```
-
-```java
-public Iterator<E> iterator()
+public Iterator<E> iterator()   O(1)    iterating using the iterator takes O(size() * log(size()))
 ```
