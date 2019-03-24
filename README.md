@@ -33,7 +33,7 @@ public void set(int index, E data)   O(log(index))
 ```
 
 ```java
-public boolean hasData(int index)   O(O(log(index)))
+public boolean hasData(int index)   O(log(index))
 ```
 
 ```java
